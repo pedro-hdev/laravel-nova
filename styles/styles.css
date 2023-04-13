@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary--color: #f1f5f9;
+  --second--color: #0ea5e9;
+  --third--color: #22c55e;
+  --four--color: #64748b;
+}
+
+body {
+  background-color: var(--primary--color);
+}
+
+header {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Nunito Sans", sans-serif;
+  padding: 15px;
+  align-items: center;
+}
+header .logo {
+  padding-left: 10px;
+}
+header .logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+header .logo h4 {
+  padding-left: 8px;
+  color: #475569;
+  font-weight: 800;
+  font-size: 16px;
+}
+header .bar-seach {
+  width: 60%;
+}
+header .bar-seach input {
+  width: 320px;
+  padding: 8px;
+  padding-left: 40px;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--primary--color);
+  background-image: url(../image/Outline/lupa.svg);
+  background-repeat: no-repeat;
+  background-position-x: 11px;
+  background-position-y: 5px;
+}
+header .bar-seach input::-moz-placeholder {
+  color: #94a3b8;
+}
+header .bar-seach input::placeholder {
+  color: #94a3b8;
+}
+header .perfil {
+  display: flex;
+  gap: 20px;
+}
+header .perfil a {
+  gap: 5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+header .perfil a p {
+  color: #475569;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 900px) {
+  header .logo {
+    padding-right: 5px;
+  }
+  header .logo h4 {
+    display: none;
+  }
+  header .perfil a p {
+    display: none;
+  }
+}
+@media screen and (max-width: 530px) {
+  header .bar-seach input {
+    width: 100%;
+  }
+}
+main {
+  display: flex;
+  font-family: "Nunito Sans", sans-serif;
+}
+main .menu {
+  padding-top: 20px;
+  color: var(--four--color);
+}
+main .menu a {
+  color: var(--four--color);
+  text-decoration: none;
+}
+main .menu a .name-dash {
+  display: flex;
+  padding-left: 20px;
+  align-items: center;
+}
+main .menu a .name-dash h4 {
+  padding-left: 15px;
+  font-size: 16px;
+}
+main .menu a .name-dash i {
+  padding-left: 50px;
+}
+main .menu a .name-resources {
+  padding-top: 10px;
+  display: flex;
+  padding-left: 20px;
+  align-items: center;
+}
+main .menu a .name-resources h4 {
+  padding-left: 13px;
+  font-size: 16px;
+}
+main .menu a .name-resources i {
+  padding-left: 63px;
+}
+main .menu a .dashboards {
+  display: none;
+}
+main .menu a .dashboards ul {
+  list-style: none;
+  padding-left: 53px;
+}
+main .menu a:focus {
+  color: var(--four--color);
+}
+main .menu a:focus .dashboards {
+  display: block;
+}
+main .menu h4:hover {
+  color: var(--second--color);
+}
+main .menu li:hover {
+  color: var(--second--color);
+}/*# sourceMappingURL=styles.css.map */

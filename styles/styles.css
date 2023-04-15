@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 :root {
   --primary--color: #f1f5f9;
   --second--color: #0ea5e9;
@@ -111,7 +119,7 @@ main .menu a .name-dash h4 {
   padding-left: 15px;
   font-size: 16px;
 }
-main .menu a .name-dash i {
+main .menu a .name-dash img {
   padding-left: 50px;
 }
 main .menu a .name-resources {
@@ -124,21 +132,39 @@ main .menu a .name-resources h4 {
   padding-left: 13px;
   font-size: 16px;
 }
-main .menu a .name-resources i {
+main .menu a .name-resources img {
   padding-left: 63px;
 }
-main .menu a .dashboards {
+main .menu a .list {
   display: none;
 }
-main .menu a .dashboards ul {
+main .menu a .list ul {
   list-style: none;
   padding-left: 53px;
+}
+main .menu a .list ul li {
+  font-weight: 400;
+  font-size: 14;
+}
+main .menu a .list ul li span {
+  color: var(--second--color);
+  font-weight: 800;
 }
 main .menu a:focus {
   color: var(--four--color);
 }
-main .menu a:focus .dashboards {
+main .menu a:focus .list {
   display: block;
+  animation-name: anime;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+main .menu i:hover {
+  color: var(--second--color);
+}
+main .menu i:focus {
+  transform: rotate(180deg);
+  transition: 0.3s;
 }
 main .menu h4:hover {
   color: var(--second--color);

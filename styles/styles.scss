@@ -3,6 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+ @keyframes anime{
+  0%{
+    opacity: 0;
+
+  }
+  100%{
+    opacity: 1;
+
+  }
+
+}
 :root {
   --primary--color: #f1f5f9;
   --second--color: #0ea5e9;
@@ -106,7 +117,6 @@ main {
     padding-top: 20px;
     color: var(--four--color);
     a {
-     
       color: var(--four--color);
       text-decoration: none;
 
@@ -115,42 +125,60 @@ main {
         padding-left: 20px;
         align-items: center;
         h4 {
-          
           padding-left: 15px;
           font-size: 16px;
         }
-        i {
+        img {
           padding-left: 50px;
         }
       }
-      .name-resources{
+      .name-resources {
         padding-top: 10px;
         display: flex;
         padding-left: 20px;
         align-items: center;
         h4 {
-          
           padding-left: 13px;
           font-size: 16px;
         }
-        i {
+        img {
           padding-left: 63px;
         }
       }
-      .dashboards {
+      .list {
         display: none;
         ul {
           list-style: none;
           padding-left: 53px;
+          li {
+            font-weight: 400;
+            font-size: 14;
+            span {
+              color: var(--second--color);
+              font-weight: 800;
+            }
+          }
         }
       }
     }
-   
+
     a:focus {
       color: var(--four--color);
-      .dashboards {
+      .list {
         display: block;
+        animation-name: anime;
+        animation-duration: 0.5s;
+        animation-iteration-count: 1;
+
       }
+    }
+
+    i:hover {
+      color: var(--second--color);
+    }
+    i:focus{
+      transform: rotate(180deg);
+      transition: 0.3s;
     }
     h4:hover {
       color: var(--second--color);
@@ -159,4 +187,6 @@ main {
       color: var(--second--color);
     }
   }
+
 }
+

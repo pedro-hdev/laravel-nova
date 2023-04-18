@@ -3,16 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
- @keyframes anime{
-  0%{
+@keyframes anime {
+  0% {
     opacity: 0;
-
   }
-  100%{
+  100% {
     opacity: 1;
-
   }
-
 }
 :root {
   --primary--color: #f1f5f9;
@@ -116,6 +113,7 @@ main {
   .menu {
     padding-top: 20px;
     color: var(--four--color);
+
     a {
       color: var(--four--color);
       text-decoration: none;
@@ -128,7 +126,7 @@ main {
           padding-left: 15px;
           font-size: 16px;
         }
-        img {
+        span {
           padding-left: 50px;
         }
       }
@@ -141,7 +139,7 @@ main {
           padding-left: 13px;
           font-size: 16px;
         }
-        img {
+        span {
           padding-left: 63px;
         }
       }
@@ -169,14 +167,13 @@ main {
         animation-name: anime;
         animation-duration: 0.5s;
         animation-iteration-count: 1;
-
       }
     }
 
     i:hover {
       color: var(--second--color);
     }
-    i:focus{
+    i:focus {
       transform: rotate(180deg);
       transition: 0.3s;
     }
@@ -187,6 +184,37 @@ main {
       color: var(--second--color);
     }
   }
+  .body-lateral {
+    .bloc {
+      padding-top: 30px;
+      padding-left: 40px;
+      .bloc-users {
+        width: 340px;
+        height: 160px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
+          0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+        .top-bloc {
+          display: flex;
+          justify-content: space-between;
+        }
+        .bar-grafic {
+          width: 56px;
+          height: 56px;
+          background-color: var(--second--color);
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
+          border-radius: 8px;
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
 }
-

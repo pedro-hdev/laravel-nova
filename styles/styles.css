@@ -119,7 +119,7 @@ main .menu a .name-dash h4 {
   padding-left: 15px;
   font-size: 16px;
 }
-main .menu a .name-dash img {
+main .menu a .name-dash span {
   padding-left: 50px;
 }
 main .menu a .name-resources {
@@ -132,7 +132,7 @@ main .menu a .name-resources h4 {
   padding-left: 13px;
   font-size: 16px;
 }
-main .menu a .name-resources img {
+main .menu a .name-resources span {
   padding-left: 63px;
 }
 main .menu a .list {
@@ -171,4 +171,33 @@ main .menu h4:hover {
 }
 main .menu li:hover {
   color: var(--second--color);
+}
+main .body-lateral .bloc {
+  padding-top: 30px;
+  padding-left: 40px;
+}
+main .body-lateral .bloc .bloc-users {
+  width: 340px;
+  height: 160px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+main .body-lateral .bloc .bloc-users .top-bloc {
+  display: flex;
+  justify-content: space-between;
+}
+main .body-lateral .bloc .bloc-users .bar-grafic {
+  width: 56px;
+  height: 56px;
+  background-color: var(--second--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+main .body-lateral .bloc .bloc-users .bar-grafic img {
+  width: 30px;
+  height: 30px;
 }/*# sourceMappingURL=styles.css.map */

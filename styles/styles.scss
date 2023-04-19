@@ -11,6 +11,15 @@
     opacity: 1;
   }
 }
+@keyframes progress-animation {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 75%;
+  }
+}
 :root {
   --primary--color: #f1f5f9;
   --second--color: #0ea5e9;
@@ -35,6 +44,22 @@ header {
       align-items: center;
 
       text-decoration: none;
+    }
+    .menu-mobile {
+      display: none;
+      button {
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+        width: 30px;
+        height: 30px;
+        hr {
+          border: none;
+          margin: 2px;
+          padding: 2px;
+          background-color: var(--four--color);
+        }
+      }
     }
     h4 {
       padding-left: 8px;
@@ -84,9 +109,14 @@ header {
 @media screen and (max-width: 900px) {
   header {
     .logo {
-      padding-right: 5px;
+      display: flex;
+      padding-right: 3px;
       h4 {
         display: none;
+      }
+      .menu-mobile {
+        padding-left: 10px;
+        display: block;
       }
     }
     .perfil {
@@ -168,15 +198,16 @@ main {
         animation-duration: 0.5s;
         animation-iteration-count: 1;
       }
+      span {
+        writing-mode:sideways-lr;
+        transition: 0.3s;
+      }
     }
 
     i:hover {
       color: var(--second--color);
     }
-    i:focus {
-      transform: rotate(180deg);
-      transition: 0.3s;
-    }
+
     h4:hover {
       color: var(--second--color);
     }
@@ -185,10 +216,16 @@ main {
     }
   }
   .body-lateral {
-    .bloc {
+    width: 100%;
+    .conteiner-bloc {
+      overflow-x: auto;
       padding-top: 30px;
       padding-left: 40px;
-      .bloc-users {
+      display: flex;
+      gap: 20px;
+
+      .bloc {
+        flex: 0 0 auto;
         width: 340px;
         height: 160px;
         padding: 20px;
@@ -196,23 +233,105 @@ main {
         border-radius: 8px;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
           0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+        h1 {
+          color: var(--four--color);
+          font-size: 36px;
+          font-weight: 400;
+        }
+
         .top-bloc {
           display: flex;
           justify-content: space-between;
-        }
-        .bar-grafic {
-          width: 56px;
-          height: 56px;
-          background-color: var(--second--color);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          border-radius: 8px;
-          img {
-            width: 30px;
-            height: 30px;
+          h4 {
+            color: var(--four--color);
+            font-weight: 800;
+            font-size: 16px;
           }
+          select {
+            color: var(--four--color);
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            padding-left: 10px;
+            padding-right: 8px;
+          }
+        }
+        .bottom-bloc {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          padding-top: 22px;
+          .bar-grafic {
+            width: 50px;
+            height: 50px;
+            background-color: var(--second--color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 8px;
+            img {
+              width: 38px;
+              height: 28px;
+            }
+          }
+        }
+        span {
+          h1 {
+            padding-top: 10px;
+          }
+        }
+        .barra {
+          margin-top: 10px;
+          height: 16px;
+          background-color: #e2e8f0;
+          border-radius: 999px;
+          position: relative;
+          .bar-progress {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background-color: var(--third--color);
+            border-radius: 999px;
+            animation: progress-animation 6s infinite;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 945px) {
+  main {
+    .menu {
+      a {
+        .name-dash {
+          span {
+            padding-left: 40px;
+          }
+        }
+        .name-resources {
+          span {
+            padding-left: 53px;
+          }
+        }
+      }
+    }
+    .body-lateral {
+      .conteiner-bloc {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  main {
+    .menu {
+      display: none;
+    }
+    .body-lateral {
+      .conteiner-bloc {
+        gap: 0;
+        .bloc {
+          scale: 0.9;
         }
       }
     }

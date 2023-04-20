@@ -27,6 +27,12 @@
   --four--color: #64748b;
 }
 
+.margin-main {
+  margin: 0 auto;
+  max-width: 1600px;
+  width: 95%;
+}
+
 body {
   background-color: var(--primary--color);
 }
@@ -41,9 +47,10 @@ header {
   align-items: center;
 }
 header .logo {
-  padding-left: 10px;
+  padding-right: 83px;
 }
 header .logo a {
+  width: 100%;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -65,15 +72,19 @@ header .logo .menu-mobile button hr {
   background-color: var(--four--color);
 }
 header .logo h4 {
+  white-space: nowrap;
+  width: 100%;
   padding-left: 8px;
   color: #475569;
   font-weight: 800;
   font-size: 16px;
 }
-header .bar-seach {
-  width: 60%;
+header .lateral-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
-header .bar-seach input {
+header .lateral-menu .bar-seach input {
   width: 320px;
   padding: 8px;
   padding-left: 40px;
@@ -85,48 +96,28 @@ header .bar-seach input {
   background-position-x: 11px;
   background-position-y: 5px;
 }
-header .bar-seach input::-moz-placeholder {
+header .lateral-menu .bar-seach input::-moz-placeholder {
   color: #94a3b8;
 }
-header .bar-seach input::placeholder {
+header .lateral-menu .bar-seach input::placeholder {
   color: #94a3b8;
 }
-header .perfil {
+header .lateral-menu .perfil {
   display: flex;
   gap: 20px;
+  padding-left: 5px;
 }
-header .perfil a {
+header .lateral-menu .perfil a {
   gap: 5px;
   text-decoration: none;
   display: flex;
   align-items: center;
 }
-header .perfil a p {
+header .lateral-menu .perfil a p {
   color: #475569;
   font-size: 14px;
 }
 
-@media screen and (max-width: 900px) {
-  header .logo {
-    display: flex;
-    padding-right: 3px;
-  }
-  header .logo h4 {
-    display: none;
-  }
-  header .logo .menu-mobile {
-    padding-left: 10px;
-    display: block;
-  }
-  header .perfil a p {
-    display: none;
-  }
-}
-@media screen and (max-width: 530px) {
-  header .bar-seach input {
-    width: 100%;
-  }
-}
 main {
   display: flex;
   font-family: "Nunito Sans", sans-serif;
@@ -149,10 +140,10 @@ main .menu a .name-dash h4 {
   font-size: 16px;
 }
 main .menu a .name-dash span {
-  padding-left: 50px;
+  margin-left: 50px;
 }
 main .menu a .name-resources {
-  padding-top: 10px;
+  padding-top: 20px;
   display: flex;
   padding-left: 20px;
   align-items: center;
@@ -162,7 +153,7 @@ main .menu a .name-resources h4 {
   font-size: 16px;
 }
 main .menu a .name-resources span {
-  padding-left: 63px;
+  margin-left: 63px;
 }
 main .menu a .list {
   display: none;
@@ -172,6 +163,7 @@ main .menu a .list ul {
   padding-left: 53px;
 }
 main .menu a .list ul li {
+  padding-top: 10px;
   font-weight: 400;
   font-size: 14;
 }
@@ -189,7 +181,7 @@ main .menu a:focus .list {
   animation-iteration-count: 1;
 }
 main .menu a:focus span {
-  writing-mode: sideways-lr;
+  transform: rotate(180deg);
   transition: 0.3s;
 }
 main .menu i:hover {
@@ -207,7 +199,6 @@ main .body-lateral {
 main .body-lateral .conteiner-bloc {
   overflow-x: auto;
   padding-top: 30px;
-  padding-left: 40px;
   display: flex;
   gap: 20px;
   padding-bottom: 5px;
@@ -241,6 +232,11 @@ main .body-lateral .conteiner-bloc .bloc .top-bloc select {
   border-radius: 4px;
   padding-left: 10px;
   padding-right: 8px;
+}
+main .body-lateral .conteiner-bloc .bloc .top-bloc p {
+  color: var(--four--color);
+  font-size: 14px;
+  font-weight: 400;
 }
 main .body-lateral .conteiner-bloc .bloc .bottom-bloc {
   display: flex;
@@ -279,13 +275,86 @@ main .body-lateral .conteiner-bloc .bloc .barra .bar-progress {
   border-radius: 999px;
   animation: progress-animation 6s infinite;
 }
+main .body-lateral .container-user {
+  padding-top: 15px;
+}
+main .body-lateral .container-user h1 {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--four--color);
+}
+main .body-lateral .container-user .seach-user {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
+}
+main .body-lateral .container-user .seach-user input {
+  border: none;
+  width: 320px;
+  border-radius: 999px;
+  padding: 8px;
+  padding-left: 38px;
+  background-image: url(../image/Outline/lupa.svg);
+  background-repeat: no-repeat;
+  background-position-x: 11px;
+  background-position-y: 8px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+main .body-lateral .container-user .seach-user input::-moz-placeholder {
+  color: #94a3b8;
+}
+main .body-lateral .container-user .seach-user input::placeholder {
+  color: #94a3b8;
+}
+main .body-lateral .container-user .seach-user button {
+  cursor: pointer;
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  background-color: var(--second--color);
+  width: 111px;
+  height: 36px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
 
+@media screen and (max-width: 900px) {
+  header .logo {
+    display: flex;
+    padding-right: 5px;
+  }
+  header .logo h4 {
+    display: none;
+  }
+  header .logo .menu-mobile {
+    padding-left: 10px;
+    display: block;
+  }
+  header .perfil a p {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  main .body-lateral .container-user .seach-user input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 530px) {
+  header .lateral-menu .bar-seach input {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 945px) {
   main .menu a .name-dash span {
-    padding-left: 40px;
+    margin-left: 40px;
   }
   main .menu a .name-resources span {
-    padding-left: 53px;
+    margin-left: 53px;
   }
   main .body-lateral .conteiner-bloc {
     padding-left: 10px;

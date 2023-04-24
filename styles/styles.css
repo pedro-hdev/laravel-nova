@@ -253,10 +253,6 @@ main .body-lateral .conteiner-bloc .bloc .bottom-bloc .bar-grafic {
   align-items: center;
   border-radius: 8px;
 }
-main .body-lateral .conteiner-bloc .bloc .bottom-bloc .bar-grafic img {
-  width: 38px;
-  height: 28px;
-}
 main .body-lateral .conteiner-bloc .bloc span h1 {
   padding-top: 10px;
 }
@@ -321,6 +317,44 @@ main .body-lateral .container-user .seach-user button {
   font-size: 14px;
   color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+main .body-lateral .container-table {
+  padding-top: 30px;
+}
+main .body-lateral .container-table table {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+}
+main .body-lateral .container-table table caption {
+  background-color: #ffffff;
+  /*    display: flex;
+  justify-content: space-between;*/
+  padding: 15px;
+}
+main .body-lateral .container-table table caption .container-cap {
+  display: flex;
+  justify-content: space-between;
+}
+main .body-lateral .container-table table caption .container-cap .select-all a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+main .body-lateral .container-table table caption .container-cap .tools {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+main .body-lateral .container-table table caption .container-cap .tools a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+main .body-lateral .container-table table thead tr th {
+  font-size: 12px;
+  padding-right: 5px;
 }
 
 @media screen and (max-width: 900px) {

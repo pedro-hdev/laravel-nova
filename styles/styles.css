@@ -116,6 +116,7 @@ header .lateral-menu .perfil a {
 header .lateral-menu .perfil a p {
   color: #475569;
   font-size: 14px;
+  font-weight: 600;
 }
 
 main {
@@ -325,12 +326,16 @@ main .body-lateral .container-table table {
   width: 100%;
   background-color: #ffffff;
   border-collapse: collapse;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
 }
 main .body-lateral .container-table table caption {
   background-color: #ffffff;
   /*    display: flex;
   justify-content: space-between;*/
-  padding: 15px;
+  padding: 10px;
+  padding-top: 20px;
+  border-radius: 8px;
 }
 main .body-lateral .container-table table caption .container-cap {
   display: flex;
@@ -352,9 +357,92 @@ main .body-lateral .container-table table caption .container-cap .tools a {
   align-items: center;
   gap: 10px;
 }
+main .body-lateral .container-table table thead {
+  border-bottom: 1px solid #f1f5f9;
+  background-color: #f8fafc;
+}
 main .body-lateral .container-table table thead tr th {
+  padding: 10px;
+  text-align: justify;
   font-size: 12px;
   padding-right: 5px;
+  font-weight: 800;
+  color: var(--four--color);
+}
+main .body-lateral .container-table table thead tr th button {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: none;
+  gap: 5px;
+  background-color: transparent;
+  font-size: 12px;
+  color: var(--four--color);
+  font-weight: 800;
+}
+main .body-lateral .container-table table tbody {
+  border-bottom: 1px solid #f1f5f9;
+}
+main .body-lateral .container-table table tbody tr td {
+  padding: 10px;
+  text-align: justify;
+  color: var(--four--color);
+  font-size: 14px;
+  font-weight: 400;
+}
+main .body-lateral .container-table table tbody tr td h4 {
+  color: var(--second--color);
+  font-size: 14px;
+  font-weight: 800;
+}
+main .body-lateral .container-table table tbody tr td img {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+main .body-lateral .container-table table tbody tr td .too {
+  display: flex;
+  justify-content: space-between;
+}
+main .body-lateral .container-table table tfoot tr td {
+  padding: 10px;
+}
+main .body-lateral .container-table table tfoot tr td .tafoot {
+  display: flex;
+  justify-content: space-between;
+}
+main .body-lateral .container-table table tfoot tr td .tafoot p {
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  color: #cbd5e1;
+}
+main .body-lateral .container-table table tfoot tr td .tafoot h4 {
+  font-size: 12px;
+  text-align: center;
+  color: var(--four--color);
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  font-family: "Nunito Sans", sans-serif;
+  justify-content: center;
+}
+footer .inf-footer {
+  padding-top: 40px;
+  text-align: center;
+}
+footer .inf-footer p {
+  color: var(--four--color);
+  font-size: 12px;
+  font-weight: 400;
+}
+footer .inf-footer p span {
+  color: var(--second--color);
+  font-weight: 800;
 }
 
 @media screen and (max-width: 900px) {

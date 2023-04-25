@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
+    <link rel="icon" href="image/icon/logo.svg">
     <title>Laravel Nova</title>
   </head>
   <body>
@@ -48,7 +49,7 @@
           <a href="#">
             <img src="image/Avatar/dc.svg" alt="avatar" />
             <p>Digital Creative</p>
-            <i class="material-symbols-outlined"> expand_more </i></a
+            <img src="image/icon/seta-down.svg" alt=""></a
           >
         </div>
         <!-- perfil -->
@@ -198,18 +199,66 @@
             <thead>
               <tr>
                 <th></th>
-                <th>ID <img src="image/icon/selector.svg" alt="" /></th>
+                <th>
+                  <button>
+                    ID <img src="image/icon/selector.svg" alt="" />
+                  </button>
+                </th>
                 <th>AVATAR</th>
-                
-                <th>NAME <img src="image/icon/selector.svg" alt="" /></th>
-                <th>EMAIL <img src="image/icon/selector.svg" alt="" /></th>
+
+                <th>
+                  <button>
+                    NAME <img src="image/icon/selector.svg" alt="" />
+                  </button>
+                </th>
+                <th>
+                  <button>
+                    EMAIL <img src="image/icon/selector.svg" alt="" />
+                  </button>
+                </th>
 
                 <th>ADMIN</th>
                 <th>2FA</th>
                 <th></th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+              <tr>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td><h4>7</h4></td>
+                <td><img src="image/Avatar/mior.svg" alt="avatar" /></td>
+                <td>Mior Zaki</td>
+                <td>mior@nova.laravel.com</td>
+                <td><img src="image/icon/afirma.svg" alt="" /></td>
+                <td><img src="image/icon/afirma.svg" alt="" /></td>
+                <td>
+                  <div class="too">
+                    <img src="image/icon/3p.svg" alt="tres-pontos" /><img
+                      src="image/icon/eye.svg"
+                      alt=""
+                    />
+                    <img src="image/icon/editar.svg" alt="" /><img
+                      src="image/icon/excluir.svg"
+                      alt=""
+                    />
+                  </div>
+                  <!-- too -->
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="8">
+                  <div class="tafoot">
+                    <p>Previous</p>
+                    <h4>1-1 of 7</h4>
+                    <p>Next</p>
+                  </div>
+                </td>
+              </tr>
+            </tfoot>
           </table>
         </section>
         <!-- container-table -->
@@ -217,6 +266,11 @@
       <!-- body-lateral -->
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="inf-footer">
+        <p>Powered by <span> Laravel Nova</span> · v4.0.3 (Silver Surfer)</p>
+        <p>© 2022 Laravel LLC · by Taylor Otwell and David Hemphill.</p>
+      </div>
+    </footer>
   </body>
 </html>
